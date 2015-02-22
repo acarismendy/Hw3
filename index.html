@@ -33,6 +33,14 @@
             .attr("width",w)
             .attr("height",h)
             .style("background","lightcyan"); 
+      svg.selectAll("circle")
+        .data(data)
+        .enter()
+        .append("circle")
+        .attr("cx", function(d){return +d.Mathematics})
+        .attr("cy", function(d){return +d.Science})
+        .attr("r", 5);
+      
       //Print chart
       for(var i=0; i<data.length;i++){
         var pais=d3.select("tbody").append("tr")
