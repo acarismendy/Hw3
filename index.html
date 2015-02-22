@@ -10,7 +10,7 @@
 <body>
   <h1 style="text-align:center">Math and science correation</h1>
   
-  <div></div>
+  <div id="scatter"></div>
   
   <!--Table-->
   <table align=center>
@@ -28,7 +28,7 @@
       //Draw scatterplot
       var w=500;
       var h=300;
-      svg=d3.select("body")
+      svg=d3.select("#scatter")
             .append("svg")
             .attr("width",w)
             .attr("height",h)
