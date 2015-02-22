@@ -41,12 +41,12 @@
         .attr("cy", function(d){return +(1-d.Science/500)*h})
         .attr("r", 5)
         .attr("fill", "blue");
-      for(var i=0;i<=500;i++){
-        for(var j=0;j<=500;j++){
+      for(var i=0;i<=500;i+10){
+        for(var j=0;j<=500;j+10){
           svg.append("circle")
           .attr("cx",i)
           .attr("cy",j)
-          .attr("r", 0.2)
+          .attr("r", 1)
           .attr("fill", "white");
         }  
       }
