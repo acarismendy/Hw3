@@ -41,9 +41,8 @@
         .attr("cy", function(d){return +(1-d.Science/500)*h})
         .attr("r", 5)
         .attr("fill", "blue");
-      svg.selectAll("#whitecircle")
+      svg.select("#whitecircle")
         .append("circle")
-        .data()
         .attr("cx",250)
         .attr("cy",250)
         .attr("r", 100)
