@@ -23,13 +23,22 @@
   
   <script type="text/javascript">
     d3.csv("mathsciencecorr.csv", function(data){
-      console.log(data);
+      //Print chart
       for(var i=0; i<data.length;i++){
         var pais=d3.select("tbody").append("tr")
         pais.append("td").text(data[i].Country)
         pais.append("td").text(data[i].Mathematics)
         pais.append("td").text(data[i].Science)
       }
+      //Draw scatterplot
+      var w=500;
+      var h=300;
+      
+      svg=d3.select("#vis")
+            .append("svg")
+            .attr("width",w)
+            .attr("height",h)
+            .style("backgrownd", "lightgrey")
     });
   </script>
   
