@@ -40,8 +40,8 @@
         .attr("cx", function(d){return +d.Mathematics/500*w})
         .attr("cy", function(d){return +(1-d.Science/500)*h})
         .attr("r", 5)
-        .attr("fill", "lightblue");
-      svg.select("#whitecircle")
+        .attr("fill", "blue");
+      svg.selectAll("#whitecircle")
         .append("circle")
         .attr("cx",250)
         .attr("cy",250)
