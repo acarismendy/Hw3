@@ -23,13 +23,13 @@
   
   <script type="text/javascript">
     d3.cvs("mathsciencecorr.cvs", function(data){
+      console.log(data);
       for(var i=0; i<data.length;i++){
         var pais=d3.select("tbody").append("tr")
         pais.append("td").text(data[i].Mth)
         pais.append("td").text(data[i].Science)
       }
-    })
-    
+    });
   </script>
   
 </body>
