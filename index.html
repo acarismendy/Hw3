@@ -38,7 +38,7 @@
         .enter()
         .append("circle")
         .attr("cx", function(d){return +d.Mathematics/500*(w-10)})
-        .attr("cy", function(d){return +d.Science/500*(h-10)})
+        .attr("cy", function(d){return +h-d.Science/500*(h-10)})
         .attr("r", 5);
       
       //Print chart
