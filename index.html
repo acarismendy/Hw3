@@ -40,7 +40,11 @@
         .attr("cx", function(d){return +d.Mathematics/500*w})
         .attr("cy", function(d){return +(1-d.Science/500)*h})
         .attr("r", 5);
-
+      svg.select("circle")
+        .append("circle")
+        .attr("cx",250)
+        .attr("cy",250)
+        attr("r", 50)
       //Print chart
       for(var i=0; i<data.length;i++){
         var pais=d3.select("tbody").append("tr")
