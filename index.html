@@ -23,7 +23,7 @@
   
   <script type="text/javascript">
     d3.csv("mathsciencecorr.csv", function(data){
-      console.log(data);
+      console.log(+data);
       for(var i=0; i<data.length;i++){
         var pais=d3.select("tbody").append("tr")
         pais.append("td").text(data[i].Country)
