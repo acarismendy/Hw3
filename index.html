@@ -25,6 +25,14 @@
   
   <script type="text/javascript">
     d3.csv("mathsciencecorr.csv", function(data){
+      //Draw scatterplot
+      var w=500;
+      var h=300;
+      svg=d3.select("body")
+            .append("svg")
+            .attr("width",w)
+            .attr("height",h)
+            .style("background","lightcyan"); 
       //Print chart
       for(var i=0; i<data.length;i++){
         var pais=d3.select("tbody").append("tr")
@@ -32,15 +40,6 @@
         pais.append("td").text(data[i].Mathematics)
         pais.append("td").text(data[i].Science)
       }
-      //Draw scatterplot
-      var w=500;
-      var h=300;
-      
-      svg=d3.select("body")
-            .append("svg")
-            .attr("width",w)
-            .attr("height",h)
-            .style("background","lightgrey"); 
     });
   </script>
   
