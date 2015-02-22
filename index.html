@@ -40,6 +40,16 @@
         .attr("cx", function(d){return +d.Mathematics/500*w})
         .attr("cy", function(d){return +(1-d.Science/500)*h})
         .attr("r", 5);
+      
+      for( var i=0; i<=500;i++){
+        for(var j=0; j<=500;j++){
+          svg.selectAll("circle")
+          .append("circle")
+          .attr("cx", i)
+          .attr("cy", j})
+          .attr("r", 1);
+        }
+      }
 
       //Print chart
       for(var i=0; i<data.length;i++){
