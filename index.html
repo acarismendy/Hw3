@@ -55,8 +55,8 @@
         .attr("fill", "white")
         .attr("stroke", "blue")
         .attr("stroke-width", "1.5px");
-      for(var i=0;i*40<=w;i++){
-        for(var j=0;j*40<=h;j++){
+      for(var i=0;i<=40;i++){
+        for(var j=0;j<=40;j++){
           svg.append("circle")
           .attr("cx",xScale(i*610/40))
           .attr("cy",yScale(j*610/40))
