@@ -83,10 +83,14 @@
         .orient("left")
         .ticks(5));
       //Draw graph lines
-      for(var i=0;i<7;i++){
+      for(var i=1;i<7;i++){
        svg.append("line") 
           .attr("x1",xScale(i*100)).attr("y1",h-padding)
           .attr("x2",xScale(i*100)).attr("y2",padding)
+          .attr("style","stroke:grey;stroke-width:1px")
+        svg.append("line") 
+          .attr("x1",xScale(0)).attr("y1",i*100)
+          .attr("x2",xScale(w-padding)).attr("y2",i*100)
           .attr("style","stroke:grey;stroke-width:1px")
       }
       //Print chart
