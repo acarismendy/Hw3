@@ -10,20 +10,21 @@
 
 <body>
   <h1 style="text-align:center">Math and science correation</h1>
-  
-  <div id="scatter" style="text-align:center"></div>
-  
   <!--Table-->
-  <table align=center>
-    <tbody>
-      <tr>
-        <th>Country</th>
-        <th>Math score</th>
-        <th>Science score</th>
-      </tr>
-    </tbody>
-  </table>
-  
+  <div style="float:left">
+     <table align=center>
+      <tbody>
+        <tr>
+          <th>Country</th>
+          <th>Math score</th>
+          <th>Science score</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="scatter" style="text-align:center"></div>
+
   <script type="text/javascript">
     d3.csv("mathsciencecorr.csv", function(data){
       //Draw scatterplot
