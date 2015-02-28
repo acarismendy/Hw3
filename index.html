@@ -82,6 +82,12 @@
         .scale(yScale)
         .orient("left")
         .ticks(5));
+      //Draw graph lines
+      for(var i=0;i<7;i++){
+       svg.append("line") 
+          .attr("x1",xScale(padding+i*100)).attr("y1",padding)
+          .attr("x2",xScale(padding+i*100)).attr("y2",padding-h)
+      }
       //Print chart
       for(var i=0; i<data.length;i++){
         var pais=d3.select("tbody").append("tr")
