@@ -31,6 +31,7 @@
       var w=500;
       var h=w;
       //Create SVG
+      var padding=10;
       svg=d3.select("#scatter")
             .append("svg")
             .attr("width",w)
@@ -39,10 +40,10 @@
       //Scales
       var xScale= d3.scale.linear()
                           .domain([0,610])
-                          .range([0,w]);
+                          .range([padding,w-padding]);
       var yScale= d3.scale.linear()
                           .domain([0,610])
-                          .range([0,h]);
+                          .range([h-padding,padding]);
       //Create circles
       svg.selectAll("#bluecircle")
         .data(data)
