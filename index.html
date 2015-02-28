@@ -5,6 +5,7 @@
   <meta charset="urf-8">
   <title>Hw3</title>
   <script type="text/javascript" src="d3.js"></script>
+  <script type="text/css" src="stylesheet.css"></script>
 </head>
 
 <body>
@@ -32,7 +33,7 @@
             .append("svg")
             .attr("width",w)
             .attr("height",h)
-            .style("background","lightcyan"); 
+            .style("background","white"); 
       svg.selectAll("#bluecircle")
         .data(data)
         .enter()
@@ -40,7 +41,8 @@
         .attr("cx", function(d){return +d.Mathematics/500*w})
         .attr("cy", function(d){return +(1-d.Science/500)*h})
         .attr("r", 5)
-        .attr("fill", "blue");
+        .attr("stroke", "blue");
+        .attr("stroke-width", "1");
       for(var i=0;i<=10;i++){
         for(var j=0;j<=10;j++){
           svg.append("circle")
