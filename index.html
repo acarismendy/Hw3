@@ -44,11 +44,11 @@
         .attr("fill", "white")
         .attr("stroke", "blue")
         .attr("stroke-width", "1px");
-      for(var i=0;i<=20;i++){
-        for(var j=0;j<=20;j++){
+      for(var i=0;i*10<=w;i++){
+        for(var j=0;j*10<=h;j++){
           svg.append("circle")
-          .attr("cx",i*20/w)
-          .attr("cy",j*20/h)
+          .attr("cx",i*10)
+          .attr("cy",j*10)
           .attr("r", 1)
           .attr("fill", "black");
         }  
