@@ -28,7 +28,7 @@
     d3.csv("mathsciencecorr.csv", function(data){
       //Draw scatterplot
       var w=700;
-      var h=500;
+      var h=700;
       svg=d3.select("#scatter")
             .append("svg")
             .attr("width",w)
@@ -44,11 +44,11 @@
         .attr("fill", "white")
         .attr("stroke", "blue")
         .attr("stroke-width", "1px");
-      for(var i=0;i<=10;i++){
-        for(var j=0;j<=10;j++){
+      for(var i=0;i<=20;i++){
+        for(var j=0;j<=20;j++){
           svg.append("circle")
-          .attr("cx",i*50)
-          .attr("cy",j*50)
+          .attr("cx",i*20/w)
+          .attr("cy",j*20/h)
           .attr("r", 1)
           .attr("fill", "black");
         }  
