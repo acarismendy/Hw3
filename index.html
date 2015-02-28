@@ -65,7 +65,10 @@
         }  
       }
       //Print axes
-      
+      sgv.append("g")
+        .call(d3.svg.axis()
+        .scale(xScale)
+        .orient("bottom"));
       //Print chart
       for(var i=0; i<data.length;i++){
         var pais=d3.select("tbody").append("tr")
