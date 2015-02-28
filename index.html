@@ -5,7 +5,6 @@
   <meta charset="urf-8">
   <title>Hw3</title>
   <script type="text/javascript" src="d3.js"></script>
-  <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 </head>
 
 <body>
@@ -33,7 +32,7 @@
             .append("svg")
             .attr("width",w)
             .attr("height",h)
-            .style("background","white"); 
+            .style("background","lightcyan"); 
       svg.selectAll("#bluecircle")
         .data(data)
         .enter()
@@ -41,8 +40,7 @@
         .attr("cx", function(d){return +d.Mathematics/500*w})
         .attr("cy", function(d){return +(1-d.Science/500)*h})
         .attr("r", 5)
-        .attr("stroke", "blue");
-        .attr("stroke-width", "1");
+        .attr("fill", "blue");
       for(var i=0;i<=10;i++){
         for(var j=0;j<=10;j++){
           svg.append("circle")
@@ -52,7 +50,6 @@
           .attr("fill", "black");
         }  
       }
-
       //Print chart
       for(var i=0; i<data.length;i++){
         var pais=d3.select("tbody").append("tr")
