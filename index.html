@@ -84,6 +84,13 @@
         .scale(xScale)
         .orient("bottom")
         .ticks(5));
+      svg.append("g")
+        .attr("class","axis")
+        .attr("transform","translate("+padding+",0)")
+        .call(d3.svg.axis()
+        .scale(yScale)
+        .orient("left")
+        .ticks(5));
       //Print chart
       for(var i=0; i<data.length;i++){
         var pais=d3.select("tbody").append("tr")
