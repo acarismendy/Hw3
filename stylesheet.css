@@ -1,8 +1,6 @@
 table, th,td,tr{
-	background-color: lightblue;
-	margin: 10px;
+	background-color: white;
 	text-align: center;
 	border-collapse: collapse;
 	border: 2px solid #E0E0E0;
-	padding: 5px;
 }
