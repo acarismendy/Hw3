@@ -79,6 +79,7 @@
       //Print axes
       svg.append("g")
         .attr("class","axis")
+        .attr("transform","translate(0,"+(h-padding)+")")
         .call(d3.svg.axis()
         .scale(xScale)
         .orient("bottom"));
