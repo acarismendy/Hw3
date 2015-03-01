@@ -101,14 +101,14 @@
           .attr("x",w/2-padding)
           .attr("y",h-20)
           .attr("fill", "black")
-          .attr("style","font-size:15px;")
+          .attr("style","font-size:15px")
           .text(function(){return "Math scores";});
       svg.append("text")
           .attr("x",0)
           .attr("y",h/2+padding)
           .attr("fill", "black")
           .attr("transform","rotate(-90,10,"+(h/2+40)+")")
-          .attr("style","font-size:15px;")
+          .attr("style","font-size:25px")
           .text(function(){return "Science scores";});
       //Print chart
       for(var i=0; i<data.length;i++){
