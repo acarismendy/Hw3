@@ -87,7 +87,8 @@
        svg.append("line") 
           .attr("x1",xScale(i*100)).attr("y1",h-padding)
           .attr("x2",xScale(i*100)).attr("y2",padding)
-          .attr("style","stroke:grey;stroke-width:1px");
+          .attr("style","stroke:grey;stroke-width:1px")
+          .attr("shape-rendering:crispEdges");
       }
       //Add axes lables
       svg.append("text")
