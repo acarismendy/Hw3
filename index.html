@@ -91,10 +91,15 @@
       }
       //Add axes lables
       svg.append("text")
-          .attr("x","center")
+          .attr("x",w/2-padding)
           .attr("y",h)
           .attr("fill", "black")
           .text(function(){return "Math scores";});
+      svg.append("text")
+          .attr("x",0)
+          .attr("y",h/2-padding)
+          .attr("fill", "black")
+          .text(function(){return "Science scores";});
       //Print chart
       for(var i=0; i<data.length;i++){
         var pais=d3.select("tbody").append("tr")
