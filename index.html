@@ -23,7 +23,7 @@
 <body>
   <h1 style="text-align:center">Math/science trade-off?</h1>
   <!--Table-->
-  <div style="padding:10px; height: 90%;width:350;float: left; overflow: scroll; border: 2px solid black; border-radius:10px">
+  <div style="padding:10px; height: 90%;width:350;float: left; overflow: scroll;">
      <table align=center>
       <tbody>
         <tr>
@@ -35,7 +35,7 @@
     </table>
   </div>
 
-  <div id="scatter" style="padding:10px; float:left;"></div>
+  <div id="scatter" style="padding:10px; float:left; border: 2px solid black; border-radius:10px"></div>
 
   <script type="text/javascript">
     d3.csv("mathsciencecorr.csv", function(data){
