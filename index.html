@@ -62,19 +62,6 @@
       var yScale= d3.scale.linear()
                           .domain([0,610])
                           .range([h-padding,padding]);
-      //Create circles
-      svg.selectAll("#bluecircle")
-        .data(data)
-        .enter()
-        .append("circle")
-        .attr("cx", function(d){return +xScale(d.Mathematics)})
-        .attr("cy", function(d){return +yScale(d.Science)})
-        .attr("r", 3)
-        .attr("fill", "white")
-        .attr("stroke", "blue")
-        .attr("stroke-width", "1.5px")
-        .append("title")
-        .text(function(d){return ""+d.Country+"("+d.Mathematics+","+d.Science+")"});
       //Print axes
       svg.append("g")
         .attr("class","axis")
@@ -98,6 +85,19 @@
           .attr("style","stroke:grey;stroke-width:1px")
           .attr("shape-rendering:crispEdges");
       }
+      //Create circles
+      svg.selectAll("#bluecircle")
+        .data(data)
+        .enter()
+        .append("circle")
+        .attr("cx", function(d){return +xScale(d.Mathematics)})
+        .attr("cy", function(d){return +yScale(d.Science)})
+        .attr("r", 3)
+        .attr("fill", "white")
+        .attr("stroke", "blue")
+        .attr("stroke-width", "1.5px")
+        .append("title")
+        .text(function(d){return ""+d.Country+"("+d.Mathematics+","+d.Science+")"});
       //Add axes lables
       svg.append("text")
           .attr("x",w/2-padding)
